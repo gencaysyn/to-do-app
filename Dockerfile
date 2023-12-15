@@ -6,5 +6,6 @@ RUN mvn -f /usr/src/app/pom.xml clean package
 FROM openjdk:17-oracle
 MAINTAINER gencaysyn
 ARG JAR_FILE=/usr/src/app/target/todo-app-0.0.1-SNAPSHOT.jar
-ADD ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+COPY --from=build /usr/src/app/target/todo-app-0.0.1-SNAPSHOT.jar /usr/app/todo-app-0.0.1-SNAPSHOT.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/usr/app/todo-app-0.0.1-SNAPSHOT.jar"]
