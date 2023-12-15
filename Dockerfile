@@ -1,4 +1,4 @@
-FROM maven:3.11-jdk-17 AS build
+FROM maven:eclipse-temurin:11-jdk as builder
 COPY src /usr/src/app/src
 COPY pom.xml /usr/src/app
 RUN mvn -f /usr/src/app/pom.xml clean package
