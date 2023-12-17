@@ -5,7 +5,6 @@ import com.gencaysyn.todoapp.dto.TaskDTO;
 import com.gencaysyn.todoapp.dto.TodoListDTO;
 import com.gencaysyn.todoapp.model.Task;
 import com.gencaysyn.todoapp.model.TodoList;
-import com.gencaysyn.todoapp.service.TaskService;
 import com.gencaysyn.todoapp.service.TodoListService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
